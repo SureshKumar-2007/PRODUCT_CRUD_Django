@@ -37,7 +37,7 @@ def product_update(request, id):
     else:
         form = ProductForm(instance=product)
 
-    return render(request, 'product/product_update.html', {
+    return render(request, 'products/product_update.html', {
         'form': form
     })
 
@@ -50,6 +50,6 @@ def product_delete(request, id):
         product.delete()
         return redirect('product_list')
 
-    return render(request, 'product/product_delete.html', {
+    return render(request, 'products/product_delete.html', {
         'product': product
     })
